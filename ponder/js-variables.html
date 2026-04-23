@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script> //script tag doesn't have to go in the head, it changes when it gets loaded when added somewhere else
+        // Javascript land -- this is internal js -- we will use external later
+
+        // let is the keyword for variable in js (any type)
+        // Terminate statements with ;
+        /* 
+        multiline comment
+        works for blocks of comments
+        */
+
+        let name = "Shay";
+        let age = 23;
+
+        //we can reference variables later or manipulate them later
+        //to reference the variable just write the name
+
+        age = age + 1; // or age += 1
+
+        //works like "print" in python
+        console.log(age);
+
+        // Constant variable (never changes) - const - ex: pi never changes
+
+        const nameOfTheChurch = "The Church of Jesus Christ of Latter-day Saints";
+        // constant written in camel case
+
+        //nameOfTheChurch = "Bob's church" //this will not do anything because it was already set as a constant
+
+        //how do we run js? --> web browser --> nothing shows without html
+        // control + shift + I to inspect page --> go to console to see js
+
+        //scope --> defines how variables are read within blocks
+        //js follows SCOPE
+
+        if(name === "Shay") {
+            let greeting = "Welcome";
+        }
+
+        // console.log(greeting); //because the variable was defined within a function this will not work because of variable scope
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
