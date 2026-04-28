@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Basics</title>
+    <style>
+        body {
+            background-color: #ddd;
+            font-size: 20px;
+        }
+        #content {
+            max-width: 60%;
+            margin: 40px auto;
+            border: 1px solid darkgrey;
+            padding: 50px;
+        }
+        p {
+            color: #035f9c;
+            font-size: 1.3em;
+        }
+        hr {
+            height: 3px;
+            background-color: #035f9c;
+            margin: 30px auto;
+            width: 80%;
+        }
+        h1, h2, p {
+            text-align: center;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 50%;
+        }
+        #topics {
+            width: 55%;
+            margin: 0 auto;
+            line-height: 1.5em;
+        }
+        .list {
+            list-style-type: none;
+        }  
+        
+        .new-list {
+            list-style-type: disc;
+            color: purple;
+        }
+    </style>
+   
+</head>
+<body>
+    <div id="content">
+        <h1>HTML, CSS, and JS</h1>
+        <p>The foundational technologies that power websites and web applications</p>
+        <hr>
+        <img src="https://wddbyui.github.io/wdd131/images/trifecta.png" alt="JS, CSS, and HTML logos">
+        <div id="topics">
+            <h2>HyperText Markup Language</h2>
+            <ul class="list">
+                <li>Defines the structure and content of a web page.</li>
+                <li>Without HTML there's nothing for the browser to display.</li>
+            </ul>
+            <h2>Cascading Style Sheets</h2>
+            <ul class="list">
+                <li>Controls how the HTML elements look.</li>
+                <li>Without CSS pages look plain and unstyled.</li>
+            </ul>
+            <h2>JavaScript</h2>
+            <ul class="list">
+                <li>Adds interactivity and dynamic behavior.</li>
+                <li>Without JavaScript nothing on the page responds dynamically to user actions.</li>
+            </ul>
+        </div>
+    </div>
+     <script>
+        // Anytime we want to change DOM, use 'document'- it's a variable that's already stored in js that can hold multiple values and functions
+        console.log(document);
+
+        //querySelector accepts any css selectors and returns a single element
+
+        let firstList = document.querySelector(".list");
+        // must store this in a variable like shown above --> can be done in one line
+
+        firstList.style.backgroundColor = "red"; //can change css styles with .style added to variable --> remember to use js typecase when referring to css
+
+        // the placement of the script tag/ whether we're using an external js document has an impact on how the js executes and if it does or not
+
+        // getElementById ONLY works with IDs and only returns one
+        let content = document.getElementById("content"); //don't need to include #
+        content.style.color = "#00FF00";
+
+        // what you use is up to you
+
+        //.setAttribute --> allows you to change specific attributes like "src" or "class"
+        document.querySelector("img").setAttribute("src", "portrait.png");    
+        document.querySelector("img").setAttribute("alt", "new alt tag");
+
+        //.textContent --> allows you to change the text of selector
+        document.querySelector("h1").textContent = "NEW TEXT CONTENT";
+
+        //you can also return the attribute like this
+        let headingText = document.querySelector("h1").textContent;
+        console.log(headingText);
+
+        // can also assign a new class to a pre-existing selector
+        firstList.className = "new-list";
+
+        // selects ALL ul's, [1] means second in array
+        document.querySelectorAll("ul")[1].style.backgroundColor = "pink";
+    </script>
+</body>
+</html>
