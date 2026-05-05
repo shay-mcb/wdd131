@@ -1,0 +1,86 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: Roboto, sans-serif;
+}
+header,
+main,
+footer {
+  max-width: 1000px;
+  margin: 1rem auto;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background-color: lightblue;
+}
+h1 {
+    text-align: center;
+}
+section {
+  padding: 20px;
+  background-color: white;
+  margin: 1em;
+  border: 1px solid #ccc;
+}
+nav a {
+    padding: 20px;
+    color: black;
+    display: none;
+}
+nav a:hover {
+    text-decoration: none;
+    color: #616061;
+}
+.menu-btn {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    margin: 5px 0;
+}
+footer {
+    text-align: center;
+}
+main {
+    /*with media queries we only have to use display: grid once and just change the columns later if that's what we want to change*/
+    display: grid; /*display: flex; defaults to rows*/
+    grid-template-columns: 1fr;
+}
+nav {
+    text-align: right;
+}
+
+/*tablet size*/
+@media screen and (min-width: 500px) and (max-width: 1199px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    nav a {
+        display: inline;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+}
+
+/*desktop size*/
+@media screen and (min-width: 1200px) { /*this is how we make the screen size responsive*/
+    /*this is saying that the css below only applies when this rule is true*/
+    main {
+        grid-template-columns: 1fr 1fr 1fr; /*number of columns is designated by how many units, size is based on the unit chosen, fr is a fraction that works almost like a percentage*/
+    }
+
+    nav a {
+        display: inline;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+}
