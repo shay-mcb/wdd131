@@ -52,7 +52,7 @@ a {
 .date {
     font-style: italic;
 }
-#desc {
+.desc {
     grid-row: 5;
     font-family: Arial, sans-serif;
     max-width: 80%;
@@ -90,9 +90,10 @@ footer {
         display: block;
         margin-top: 20px;
     }
-    #desc {
+    .desc {
         grid-column: 2/4;
         grid-row: 3;
+        padding-left: 20px;
     }
     .analysis {
         grid-row: 1/3;
@@ -100,7 +101,7 @@ footer {
         grid-column: 1/2;
         text-align: right;
     }
-    .book hr {
+    .vertical-line {
         grid-column: 1/3;
         grid-row: 1/4;
         width: 2px;
