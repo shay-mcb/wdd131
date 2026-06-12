@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="Shay McBride">
+    <meta description="DnD character card that changes when attacked">
+    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Character Card">
+    <meta property="og:description" content="DnD character card that changes when attacked">
+    <meta property="og:url" content="https://shay-mcb/github.io/wdd131/charactercard">
+    <meta property="og:image" content="https://andejuli.github.io/wdd131/character_card/snortleblat.webp">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Character Card">
+    <meta name="twitter:description" content="DnD character card that changes when attacked">
+    <meta name="twitter:image" content="https://andejuli.github.io/wdd131/character_card/snortleblat.webp">
+    <!-- One favicon (ICO works everywhere) -->
+    <link rel="icon" href="favicon.ico">
+    <!-- One Apple Touch Icon (iOS home screen) -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <title>Character Card</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="character.js" defer></script>
+</head>
+<body>
+    <div class="card">
+        <img class="image" id="char-image" alt="Swamp Beast Character">
+        <h1 class="name" id="char-name"></h1>
+        <div class="stats">
+            <p id="char-class"></p>
+            <p id="char-level"></p>
+            <p id="char-health"></p>
+        </div>
+        <div class="buttons">
+            <button id="attackedButton">Attacked</button>
+            <button id="levelUpButton">Level Up</button>
+        </div>
+    </div>
+</body>
+</html>
