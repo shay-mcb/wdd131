@@ -13,31 +13,37 @@ header {
 
 .search-bar-container {
     display: flex;
-    align-self: center;
-}
-
-.search-bar {
-    width: 590px;
-    height: 50px;
-    font-size: 25px;
+    align-items: center;
     border: 5px solid black;
     border-radius: 10px;
     margin: 10px;
     margin-left: 0;
+    overflow: hidden;
+}
+
+.search-bar {
+    font-size: 25px;
+    margin-left: 0;
+    border: none;
+    outline: none;
+}
+
+#searchButton {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
 }
 
 .search-img {
-    width: 4%;
-    margin-left: -80px;
-    pointer-events: none;
+    width: 40%;
 }
 
 .mini-line {
     border: 1px solid black;
     height: 40px;
-    margin-left: -60px;
-    margin-right: 90px;
-    margin-top: 20px;
+    margin-left: 190px;
 }
 
 h1 {
@@ -71,7 +77,10 @@ body {
     margin-bottom: 5px;
 }
 
-.dessert-box {
+.category-box {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
     font-size: 25px;
     font-weight: bold;
     padding: 10px;
@@ -128,8 +137,12 @@ footer {
         width: 1190px;
     }
 
+    .search-img {
+        width: 45%;
+    }
+
     .mini-line {
-        margin-left: -80px;
+        margin-left: 770px;
     }
 
     .main-divider {
@@ -152,8 +165,14 @@ footer {
         flex-wrap: wrap;
     }
 
-    .dessert-box {
+    .category-box {
         margin-top: 30px;
+    }
+
+    h2 {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        max-width: 600px;
     }
 
     p {
