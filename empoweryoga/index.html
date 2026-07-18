@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta description="free yoga class database">
+    <meta author="Shay McBride">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <title>Empower Yoga</title>
+    <link href="styles/yoga.css" rel="stylesheet">
+    <script src="yoga.js" defer></script>
+</head>
+<body>
+    <header>
+        <img class="logo" src="images/empoweryogalogo.png" alt="Logo image" width="237" height="237">
+        <h1>Free Class Database</h1>
+        <button class="menu">
+            <div class="bar1" aria-label="menu button"></div>
+            <div class="bar2" aria-label="menu button"></div>
+        </button>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#" id="signUpLink">Sign Up</a>
+        </nav>
+    </header>
+    <main>
+        <h2 class="find-class">Find a free yoga class!</h2>
+        <form class="search-container">
+            <input class="search-bar" id="findClass" name="findClass" type="text" placeholder="Search for a class">
+            <button id="searchButton">
+                <img class="search-bar-button" src="images/search.svg" alt="search button">
+            </button>
+        </form>
+        <div id="class-card-container">
+            <div class="class-card">
+                <h2 class="class-name" id="className"></h2>
+                <img class="class-img" id="classImg">
+                <p class="description" id="classDescription"></p>
+                <button class="tags" id="classTags"></button>
+                <button class="sign-up" id="signUpBtn"></button>
+            </div>
+        </div>
+        <!--Add placeholder code for sign up sheet-->
+        <div class="sign-up-container">
+            <form id="signUp">
+                <div class="field">
+                    <label for="firstName">First Name</label>
+                    <input id="firstName" name="firstName" type="text" required />
+                </div>
+                <div class="field">
+                    <label for="lastName">Last Name</label>
+                    <input id="lastName" name="lastName" type="text" required />
+                </div>
+                <div class="field full">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" required />
+                </div>
+                <button class="full" type="submit">Join Class</button>
+            </form>
+            <section id="output" aria-live="polite"></section>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-imgs">
+            <img src="images/insta.svg" alt="instagram logo">
+            <img src="images/facebook.svg" alt="facebook logo">
+            <img src="images/youtube.svg" alt="youtube logo">
+        </div>
+    </footer>
+</body>
+</html>
